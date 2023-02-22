@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+  <body>
+    <button tyle="text-align: center;" onclick="window.location.href = 'mealplan.html';">Meal Plan</button>
+    <h1 style="text-align: center;">Workout Planner</h1>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="workout.js"></script>
+    <div style='float:left; width:40%'>
+      <form id="myForm">
+        <label for="plan">What would be your goal?:</label>
+        <select id="plan" name="plan">
+          <option value="Gym Workout">Gym Workout</option>
+          <option value="Sports Training">Sports Training</option>
+        </select><br><br>
+        <label for="height">Height (in inches):</label>
+        <input type="number" id="height" name="height"><br><br>
+        <label for="weight">Weight (in kg):</label>
+        <input type="number" id="weight" name="weight"><br><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+        <label for="activity-level">Current Activity Level:</label>
+        <select id="activity-level" name="activity-level">
+          <option value="sedentary">Sedentary</option>
+          <option value="lightly-active">Lightly Active</option>
+          <option value="moderately-active">Moderately Active</option>
+          <option value="very-active">Very Active</option>
+          <option value="extremely-active">Extremely Active</option>
+        </select><br><br>
+        <label for="goals">Goals:</label>
+        <input type="text" id="goals" name="goals"><br><br>
+        <input type="submit" value="Submit">
+        
+      </form>
+  </div>
+  <div style='float:right; width:40%; margin-left:30px'>
+    <p id="p1">Your plan will appear here!</p>
+    <h2>Push Day:<br></h2>
+    <p id="p2"></p>
+    <h2>Pull Day:<br></h2>
+    <p id="p3"></p>
+    <h2>Leg Day:<br></h2>
+    <p id="p4"></p>
+    
+</div>
+  </body>
+</html>
